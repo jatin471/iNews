@@ -8,19 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var network = Network()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            List(network.posts) {post in
+                Text(post.title)
+            }
+            .navigationTitle("iNews")
         }
-        .padding()
+        .onAppear{
+            self.network.fetchData()
+        }
+        
     }
 }
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+
