@@ -1,7 +1,6 @@
 # iNews
 iNews - iOS Swift UI App
 
-iNews Banner
 
 iNews is a cutting-edge iOS Swift UI app that brings you the latest news and updates from around the world. Powered by the Algolia API, iNews provides a seamless and engaging user experience for staying informed about current events.
 
